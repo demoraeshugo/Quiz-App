@@ -1,28 +1,6 @@
 import React, { Component } from "react";
 
 class AnswerFeed extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      checked: 3
-    };
-  }
-
-  onChange = i => {
-    this.setState({
-      checked: i
-    });
-    console.log(this.state.checked);
-  };
-
-  componentDidUpdate(prevProps) {
-    if (this.props.choices !== prevProps.choices) {
-      this.setState({
-        checked: 3
-      });
-    }
-  }
-
   renderChoices(array) {
     return (
       <>
@@ -33,8 +11,8 @@ class AnswerFeed extends Component {
                 <input
                   type="radio"
                   key={"input" + i}
-                  checked={this.state.checked === i ? true : false}
-                  onChange={this.onChange.bind(this, i)}
+                  checked={this.props.checked === i ? true : false}
+                  onChange={this.props.onChange.bind(this, i)}
                 ></input>
                 {cur.content}
               </label>

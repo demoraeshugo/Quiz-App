@@ -25,6 +25,8 @@ const Main = props => {
           getQuestion={props.getQuestion}
           current={props.current}
           handleSubmit={props.handleSubmit}
+          checked={props.checked}
+          onChange={props.onChange}
         ></QuestionFeed>
       );
     } 

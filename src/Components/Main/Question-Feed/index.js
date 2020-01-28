@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import NextButton from "../Question-Feed/Next-Button";
+import React, { Component } from "react"; 
 import AnswerFeed from "../Question-Feed/Answer-Feed";
 
 /*This components renders quiz 
@@ -26,23 +25,22 @@ class QuestionFeed extends Component {
   render() {
     const questionNum = this.props.current + 1;
     const content = this.props.question.question;
-    const choices = this.props.question.choices
+    const choices = this.props.question.choices;
     return (
       <>
         <div>
           <p>Question {questionNum} of 5</p>
           <p>{content}</p>
         </div>
-        <AnswerFeed choices={choices}
-        handleSubmit={this.props.handleSubmit}></AnswerFeed>
-        <NextButton
-          handleNextButtonClick={this.props.handleNextButtonClick}
-        ></NextButton>
+        <AnswerFeed
+          choices={choices}
+          handleSubmit={this.props.handleSubmit}
+          checked={this.props.checked}
+          onChange={this.props.onChange}
+        ></AnswerFeed>
       </>
     );
   }
 }
-
-
 
 export default QuestionFeed;

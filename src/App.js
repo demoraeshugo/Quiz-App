@@ -10,7 +10,8 @@ class App extends Component {
       question: "",
       score: 0,
       display: "LandingPage",
-      current: 0
+      current: 0,
+      checked: 3
     };
   }
 
@@ -21,18 +22,6 @@ class App extends Component {
     });
   };
 
-  handleNextButtonClick = () => {
-    if(this.state.current < 4) {
-      this.setState({
-        current: (this.state.current + 1)
-      })
-    } else {
-      this.setState({
-        display: "Results"
-      })
-    }
-  }
-
   getQuestion = () => {
     this.setState({
       question: jsonData.questions[this.state.current]
@@ -40,9 +29,17 @@ class App extends Component {
     console.log(this.state)
   }
 
-  answers = [0,0,0,0,0]
+
+  onChange = i => {
+    this.setState({
+      checked: i
+    });
+  };
+
+  answers = []
 
   getScore = () => {
+    console.log(this.answers)
     var score = 0;
     for(let i = 0; i < jsonData.questions.length; i++) {
       if(this.answers[i] === parseInt(jsonData.questions[i].answer)) {
@@ -54,9 +51,18 @@ class App extends Component {
     })
   }
 
-  handleSubmit = (event) => {
-    console.log(event.target)
-    event.preventDefault()
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.answers.push(this.state.checked)
+    if(this.state.current < 4) {
+      this.setState({
+        current: (this.state.current + 1)
+      })
+    } else {
+      this.setState({
+        display: "Results"
+      })
+    }
   }
 
   componentDidMount() {
@@ -64,8 +70,8 @@ class App extends Component {
   }
 
   render() {
-    const { display, current, question, score } = this.state;
-    const { handleStartButtonClick, handleNextButtonClick, getQuestion, getScore, handleSubmit} = this
+    const { display, current, question, score, checked } = this.state;
+    const { handleStartButtonClick, getQuestion, getScore, handleSubmit, onChange} = this
 
     return (
       <div>
@@ -73,12 +79,13 @@ class App extends Component {
           display={display}
           current={current}
           handleStartButtonClick={handleStartButtonClick}
-          handleNextButtonClick={handleNextButtonClick}
           question={question}
           getQuestion={getQuestion}
           getScore={getScore}
           score={score}
           handleSubmit={handleSubmit}
+          checked={checked}
+          onChange={onChange}
         />
         <Footer />
       </div>
