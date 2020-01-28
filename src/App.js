@@ -9,16 +9,27 @@ class App extends Component {
     this.state = {
       questions: questions,
       score: 0,
-      display: "Results"
+      display: "LandingPage"
     };
   }
 
+  handleStartButtonClick = () => {
+    console.log("Button Clicked")
+    this.setState({
+      display: "Questions"
+    });
+  };
+
   render() {
-    const { display } = this.state
+    const { display } = this.state;
+    const { handleStartButtonClick } = this
 
     return (
       <div>
-        <Main display = {display}/>
+        <Main
+          display={display}
+          handleStartButtonClick={handleStartButtonClick}
+        />
         <Footer />
       </div>
     );
