@@ -39,6 +39,10 @@ class App extends Component {
     console.log(this.state)
   }
 
+  componentDidMount() {
+    this.getQuestion();
+  }
+
   render() {
     const { display, current, question } = this.state;
     const { handleStartButtonClick, handleNextButtonClick, getQuestion } = this

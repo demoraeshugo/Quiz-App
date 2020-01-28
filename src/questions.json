@@ -5,15 +5,15 @@
             "question": "1. Delectus facilis nisi consequatur numquam consequatur temporibus minima",
             "choices" : [
                 {
-                    "content" : "some text here",
+                    "content" : "Option 1",
                     "button-state": "active"
                 },
                 {
-                    "content" : "some text here",
+                    "content" : "Option 2",
                     "button-state": "active"
                 },
                 {
-                    "content" : "some text here",
+                    "content" : "Option 3",
                     "button-state": "active"
                 }
             ],
@@ -24,15 +24,15 @@
             "question": "2. Delectus facilis nisi consequatur numquam consequatur temporibus minima",
             "choices" : [
                 {
-                    "content" : "some text here",
+                    "content" : "Option 1",
                     "button-state": "active"
                 },
                 {
-                    "content" : "some text here",
+                    "content" : "Option 2",
                     "button-state": "active"
                 },
                 {
-                    "content" : "some text here",
+                    "content" : "Option 3",
                     "button-state": "active"
                 }
             ],
@@ -43,15 +43,15 @@
             "question": "3. Delectus facilis nisi consequatur numquam consequatur temporibus minima",
             "choices" : [
                 {
-                    "content" : "some text here",
+                    "content" : "Option 1",
                     "button-state": "active"
                 },
                 {
-                    "content" : "some text here",
+                    "content" : "Option 2",
                     "button-state": "active"
                 },
                 {
-                    "content" : "some text here",
+                    "content" : "Option 3",
                     "button-state": "active"
                 }
             ],
@@ -62,15 +62,15 @@
             "question": "4. Delectus facilis nisi consequatur numquam consequatur temporibus minima",
             "choices" : [
                 {
-                    "content" : "some text here",
+                    "content" : "Option 1",
                     "button-state": "active"
                 },
                 {
-                    "content" : "some text here",
+                    "content" : "Option 2",
                     "button-state": "active"
                 },
                 {
-                    "content" : "some text here",
+                    "content" : "Option 3",
                     "button-state": "active"
                 }
             ],
@@ -81,15 +81,15 @@
             "question": "5. Delectus facilis nisi consequatur numquam consequatur temporibus minima",
             "choices" : [
                 {
-                    "content" : "some text here",
+                    "content" : "Option 1",
                     "button-state": "active"
                 },
                 {
-                    "content" : "some text here",
+                    "content" : "Option 2",
                     "button-state": "active"
                 },
                 {
-                    "content" : "some text here",
+                    "content" : "Option 3",
                     "button-state": "active"
                 }
             ],
