@@ -2,17 +2,17 @@ import React, { Component } from "react";
 
 class AnswerFeed extends Component {
   renderChoices(array) {
+    const { handleSubmit, checked, onChange } = this.props;
     return (
       <>
-        <form onSubmit={e => this.props.handleSubmit(e)}>
+        <form onSubmit={e => handleSubmit(e)}>
           {array.map((cur, i, arr) => {
             return (
               <label key={i}>
                 <input
                   type="radio"
-                  key={"input" + i}
-                  checked={this.props.checked === i ? true : false}
-                  onChange={this.props.onChange.bind(this, i)}
+                  checked={checked === i ? true : false}
+                  onChange={onChange.bind(this, i)}
                 ></input>
                 {cur.content}
               </label>

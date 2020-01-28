@@ -16,8 +16,7 @@ const Main = props => {
           handleStartButtonClick={props.handleStartButtonClick}
         ></LandingPage>
       );
-    } 
-    else if (props.display === "Questions") {
+    } else if (props.display === "Questions") {
       return (
         <QuestionFeed
           question={props.question}
@@ -29,13 +28,15 @@ const Main = props => {
           onChange={props.onChange}
         ></QuestionFeed>
       );
-    } 
-    else if (props.display === "Results") {
-      return <ResultFeed handleStartButtonClick={props.handleStartButtonClick}
-      score={props.score}
-      getScore={props.getScore}></ResultFeed>;
-    } 
-    else {
+    } else if (props.display === "Results") {
+      return (
+        <ResultFeed
+          handleStartButtonClick={props.handleStartButtonClick}
+          score={props.score}
+          getScore={props.getScore}
+        ></ResultFeed>
+      );
+    } else {
       console.log("Failed to Load Feed");
       return "Failed to Load Feed";
     }

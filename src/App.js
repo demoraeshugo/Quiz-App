@@ -25,10 +25,9 @@ class App extends Component {
   getQuestion = () => {
     this.setState({
       question: jsonData.questions[this.state.current]
-    })
-    console.log(this.state)
-  }
-
+    });
+    console.log(this.state);
+  };
 
   onChange = i => {
     this.setState({
@@ -36,58 +35,69 @@ class App extends Component {
     });
   };
 
-  answers = []
+  handleSubmit = e => {
+    e.preventDefault();
+    this.answers.push(this.state.checked);
+    if (this.state.current < 4) {
+      this.setState({
+        current: this.state.current + 1
+      });
+    } else {
+      this.setState({
+        display: "Results"
+      });
+    }
+  };
+
+  answers = [];
 
   getScore = () => {
-    console.log(this.answers)
+    console.log(this.answers);
     var score = 0;
-    for(let i = 0; i < jsonData.questions.length; i++) {
-      if(this.answers[i] === parseInt(jsonData.questions[i].answer)) {
-        score+=10;
+    for (let i = 0; i < jsonData.questions.length; i++) {
+      if (this.answers[i] === parseInt(jsonData.questions[i].answer)) {
+        score += 10;
       }
     }
     this.setState({
       score: score
-    })
-  }
-
-  handleSubmit = (e) => {
-    e.preventDefault()
-    this.answers.push(this.state.checked)
-    if(this.state.current < 4) {
-      this.setState({
-        current: (this.state.current + 1)
-      })
-    } else {
-      this.setState({
-        display: "Results"
-      })
-    }
-  }
+    });
+  };
 
   componentDidMount() {
     this.getQuestion();
   }
 
+  center = {
+    display: "flex",
+    textAlign: "center"
+  };
+
   render() {
     const { display, current, question, score, checked } = this.state;
-    const { handleStartButtonClick, getQuestion, getScore, handleSubmit, onChange} = this
+    const {
+      handleStartButtonClick,
+      getQuestion,
+      getScore,
+      handleSubmit,
+      onChange
+    } = this;
 
     return (
       <div>
-        <Main
-          display={display}
-          current={current}
-          handleStartButtonClick={handleStartButtonClick}
-          question={question}
-          getQuestion={getQuestion}
-          getScore={getScore}
-          score={score}
-          handleSubmit={handleSubmit}
-          checked={checked}
-          onChange={onChange}
-        />
-        <Footer />
+          <Main
+            display={display}
+            current={current}
+            handleStartButtonClick={handleStartButtonClick}
+            question={question}
+            getQuestion={getQuestion}
+            getScore={getScore}
+            score={score}
+            handleSubmit={handleSubmit}
+            checked={checked}
+            onChange={onChange}
+          />
+          <Footer />
       </div>
     );
   }

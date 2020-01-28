@@ -6,8 +6,8 @@ import AnswerFeed from "../Question-Feed/Answer-Feed";
      - Question Content
      - Question Choices
         - Choice X 
-            - Button
-            - Choice X Content
+            - Radio X
+            - Choice X Text
     - Next Button
 */
 
@@ -24,19 +24,19 @@ class QuestionFeed extends Component {
 
   render() {
     const questionNum = this.props.current + 1;
-    const content = this.props.question.question;
-    const choices = this.props.question.choices;
+    const {handleSubmit, checked, onChange} = this.props;
+    const {question, choices } = this.props.question;
     return (
       <>
         <div>
           <p>Question {questionNum} of 5</p>
-          <p>{content}</p>
+          <p>{question}</p>
         </div>
         <AnswerFeed
           choices={choices}
-          handleSubmit={this.props.handleSubmit}
-          checked={this.props.checked}
-          onChange={this.props.onChange}
+          handleSubmit={handleSubmit}
+          checked={checked}
+          onChange={onChange}
         ></AnswerFeed>
       </>
     );
