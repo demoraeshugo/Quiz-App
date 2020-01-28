@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '../../../Styles/Styles.scss';
 
 //This Component renders the results of the users quiz
 class ResultFeed extends Component {

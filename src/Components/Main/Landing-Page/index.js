@@ -1,6 +1,7 @@
 import React from "react";
 import StartButton from "../Landing-Page/Start-Button";
 import FadeIn from "react-fade-in";
+import '../../../Styles/Styles.scss'
 
 //This Component renders the results of the users quiz
 const LandingPage = props => {

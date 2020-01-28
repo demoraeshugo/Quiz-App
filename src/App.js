@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import jsonData from "../src/questions.json";
 import Main from "../src/Components/Main";
 import Footer from "../src/Components/Footer";
-import "../src/Styles.css";
 import { ReactComponent as BlueOverlay } from "./Blue-Overlay.svg";
+import '../src/Styles/Styles.scss'
 
 class App extends Component {
   constructor(props) {
@@ -85,7 +85,7 @@ class App extends Component {
     return (
       <div className="container">
         <div id="overlay">
-          <BlueOverlay className="BgOverlay"></BlueOverlay>
+          <BlueOverlay></BlueOverlay>
         </div>
         <Main
           display={display}

@@ -1,5 +1,6 @@
 import React, { Component } from "react"; 
 import AnswerFeed from "../Question-Feed/Answer-Feed";
+import '../../../Styles/Styles.css';
 
 /*
 Class based component, each question and it's answers

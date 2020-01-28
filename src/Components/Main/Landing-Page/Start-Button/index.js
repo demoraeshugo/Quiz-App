@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../../Styles.css"
+import '../../../../Styles/Styles.scss';
 
 //This Component renders the start button on the landing page
 const StartButton = props => {
