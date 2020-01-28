@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FadeIn from "react-fade-in";
+import "../../../../Styles.css"
 
 class AnswerFeed extends Component {
   renderChoices(array) {
@@ -20,7 +21,7 @@ class AnswerFeed extends Component {
                 </label>
               );
             })}
-            <input type="submit"></input>
+            <input id="Submit" type="submit"></input>
           </FadeIn>
         </form>
       </>

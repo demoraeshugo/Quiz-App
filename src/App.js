@@ -3,6 +3,7 @@ import jsonData from "../src/questions.json";
 import Main from "../src/Components/Main";
 import Footer from "../src/Components/Footer";
 import "../src/Styles.css";
+import { ReactComponent as BlueOverlay } from "./Blue-Overlay.svg";
 
 class App extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class App extends Component {
       score: 0,
       display: "Questions"
     });
-    this.answers = []
+    this.answers = [];
   };
 
   getQuestion = () => {
@@ -71,11 +72,6 @@ class App extends Component {
     this.getQuestion();
   }
 
-  center = {
-    display: "flex",
-    textAlign: "center"
-  };
-
   render() {
     const { display, current, question, score, checked } = this.state;
     const {
@@ -88,19 +84,22 @@ class App extends Component {
 
     return (
       <div className="container">
-          <Main
-            display={display}
-            current={current}
-            handleStartButtonClick={handleStartButtonClick}
-            question={question}
-            getQuestion={getQuestion}
-            getScore={getScore}
-            score={score}
-            handleSubmit={handleSubmit}
-            checked={checked}
-            onChange={onChange}
-          />
-          <Footer />
+        <div id="overlay">
+          <BlueOverlay className="BgOverlay"></BlueOverlay>
+        </div>
+        <Main
+          display={display}
+          current={current}
+          handleStartButtonClick={handleStartButtonClick}
+          question={question}
+          getQuestion={getQuestion}
+          getScore={getScore}
+          score={score}
+          handleSubmit={handleSubmit}
+          checked={checked}
+          onChange={onChange}
+        />
+        <Footer />
       </div>
     );
   }

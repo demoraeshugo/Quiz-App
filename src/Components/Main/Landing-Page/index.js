@@ -8,8 +8,18 @@ const LandingPage = props => {
   return (
     <div id="LandingPage">
       <FadeIn>
-        <p>Test you Llama Know-How</p>
-        <p>Click the button below to start the quiz</p>
+        <p>
+          (<span>L</span>)lama
+        </p>
+        <p>
+          (<span>S</span>)chool
+        </p>
+        <p>
+          (<span>A</span>)dmissions
+        </p>
+        <p>
+          (<span>T</span>)est
+        </p>
         <StartButton
           handleStartButtonClick={handleStartButtonClick}
         ></StartButton>
