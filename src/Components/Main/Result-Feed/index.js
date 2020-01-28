@@ -3,7 +3,7 @@ import React from "react";
 const ResultFeed = (props) => {
     return (
        <div>
-           <span>"Inside QuestionFeed Component</span>
+           <span>"Inside ResultFeed Component</span>
        </div>
     )
 }

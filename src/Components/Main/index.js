@@ -1,20 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
 import QuestionFeed from "../Main/Question-Feed";
 import ResultFeed from "../Main/Result-Feed";
 
 const Main = props => {
-    function getFeedType(){
-        var feed;
-        if(props.display === "Questions") {
-            feed = <QuestionFeed></QuestionFeed>
-        } else if (props.display === "Results") {
-            feed = <ResultFeed></ResultFeed>
+    function getFeedType(display){
+        if(display === "Questions") {
+            return <QuestionFeed></QuestionFeed>
+        } else if (display === "Results") {
+            return <ResultFeed></ResultFeed>
+        } else {
+            console.log("Failed to Load Feed")
+            return "Failed to Load Feed"
         }
-        return feed;
     }
 
     return (
-       getFeedType()
+       getFeedType(props.display)
     )
 }
 

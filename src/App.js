@@ -9,14 +9,16 @@ class App extends Component {
     this.state = {
       questions: questions,
       score: 0,
-      display: "Questions"
+      display: "Results"
     };
   }
 
   render() {
+    const { display } = this.state
+
     return (
       <div>
-        <Main />
+        <Main display = {display}/>
         <Footer />
       </div>
     );
