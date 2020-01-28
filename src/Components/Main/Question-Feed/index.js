@@ -21,6 +21,7 @@ class QuestionFeed extends Component {
         }
     }
 
+    /*
  getCurrentQuestion(props) {
     const questionNum = props.current + 1;
     const content = props.question.question;
@@ -34,8 +35,18 @@ class QuestionFeed extends Component {
       </>
     );
   }
+  */R
   render() {
-      return this.getCurrentQuestion(this.props)
+    const questionNum = this.props.current + 1;
+    const content = this.props.question.question;
+      return ( <>
+      <div>
+        <p>Question {questionNum} of 5</p>
+        <p>{content}</p>
+      </div>
+      <NextButton handleNextButtonClick={this.props.handleNextButtonClick}></NextButton>
+    </>
+      )
   }
 };
 
