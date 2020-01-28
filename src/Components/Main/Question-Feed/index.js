@@ -13,12 +13,10 @@ import NextButton from "../Question-Feed/Next-Button";
 class QuestionFeed extends Component {
     componentDidMount() {
         this.props.getQuestion();
-        this.props.getQuestion();
       }
     
-      componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps) {
         if (this.props.current !== prevProps.current) {
-          this.props.getQuestion();
           this.props.getQuestion();
         }
     }
