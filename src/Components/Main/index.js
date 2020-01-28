@@ -3,7 +3,9 @@ import LandingPage from "../Main/Landing-Page";
 import QuestionFeed from "../Main/Question-Feed";
 import ResultFeed from "../Main/Result-Feed";
 import FadeIn from "react-fade-in";
-import "/Users/School/Desktop/CS_Projects/Zappos Project/zappos-app/src/Styles.css";
+
+
+import '../../Styles.css'
 
 /*Functional Component that conditionally renders feed
     - LandingPage
