@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import LandingPage from "../Main/Landing-Page";
 import QuestionFeed from "../Main/Question-Feed";
 import ResultFeed from "../Main/Result-Feed";
 
 /*Functional Component that conditionally renders feed
     - LandingPage
-    - QuizFeed
+    - QuestionFeed
     - ResultFeed
 */
-const Main = (props) => {
+const Main = props => {
   function getFeedType(props) {
     if (props.display === "LandingPage") {
       return (
@@ -16,16 +16,26 @@ const Main = (props) => {
           handleStartButtonClick={props.handleStartButtonClick}
         ></LandingPage>
       );
-    } else if (props.display === "Questions") {
-      return <QuestionFeed></QuestionFeed>;
-    } else if (props.display === "Results") {
+    } 
+    else if (props.display === "Questions") {
+      return (
+        <QuestionFeed
+          question={props.question}
+          handleNextButtonClick={props.handleNextButtonClick}
+          getQuestion={props.getQuestion}
+          current={props.current}
+        ></QuestionFeed>
+      );
+    } 
+    else if (props.display === "Results") {
       return <ResultFeed></ResultFeed>;
-    } else {
+    } 
+    else {
       console.log("Failed to Load Feed");
       return "Failed to Load Feed";
     }
   }
-    return getFeedType(props);
-}
+  return getFeedType(props);
+};
 
 export default Main;

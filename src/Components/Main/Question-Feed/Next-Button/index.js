@@ -1,12 +1,12 @@
 import React from "react";
 
 //This Component renders the start button on the landing page
-const StartButton = (props) => {
+const NextButton = (props) => {
     return (
        <div>
-           <button onClick={props.handleStartButtonClick}>Start</button>
+           <button onClick={props.handleNextButtonClick}>Next</button>
        </div>
     )
 }
 
-export default StartButton;
+export default NextButton;

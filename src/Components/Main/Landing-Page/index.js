@@ -5,7 +5,8 @@ import StartButton from "../Landing-Page/Start-Button";
 const LandingPage = (props) => {
     return (
        <div>
-           <span>Here is some text about the Landing Page</span>
+           <p>Test you Llama Know-How</p>
+           <p>Click the button below to start the quiz</p>
            <StartButton handleStartButtonClick={props.handleStartButtonClick}></StartButton>
        </div>
     )

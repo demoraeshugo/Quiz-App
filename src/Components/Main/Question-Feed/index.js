@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Component } from "react";
+import NextButton from "../Question-Feed/Next-Button";
 
 /*This components renders quiz 
      - Question Number
@@ -7,13 +8,37 @@ import React from "react";
         - Choice X 
             - Button
             - Choice X Content
+    - Next Button
 */
-const QuestionFeed = (props) => {
+class QuestionFeed extends Component {
+    componentDidMount() {
+        this.props.getQuestion();
+        this.props.getQuestion();
+      }
+    
+      componentDidUpdate(prevProps) {
+        if (this.props.current !== prevProps.current) {
+          this.props.getQuestion();
+          this.props.getQuestion();
+        }
+    }
+
+ getCurrentQuestion(props) {
+    const questionNum = props.current + 1;
+    const content = props.question.question;
     return (
-       <div>
-           <span>Inside QuestionFeed Component</span>
-       </div>
-    )
-}
+      <>
+        <div>
+          <p>Question {questionNum} of 5</p>
+          <p>{content}</p>
+        </div>
+        <NextButton handleNextButtonClick={props.handleNextButtonClick}></NextButton>
+      </>
+    );
+  }
+  render() {
+      return this.getCurrentQuestion(this.props)
+  }
+};
 
 export default QuestionFeed;
