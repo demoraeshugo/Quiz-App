@@ -16,7 +16,8 @@
                     "content" : "some text here",
                     "button-state": "active"
                 }
-            ]
+            ],
+            "answer" : "0"
         },
         {
             "id": "000002",
@@ -34,7 +35,8 @@
                     "content" : "some text here",
                     "button-state": "active"
                 }
-            ]
+            ],
+            "answer" : "1"
         },
         {
             "id": "000003",
@@ -52,7 +54,8 @@
                     "content" : "some text here",
                     "button-state": "active"
                 }
-            ]
+            ],
+            "answer" : "2"
         },
         {
             "id": "000004",
@@ -70,7 +73,8 @@
                     "content" : "some text here",
                     "button-state": "active"
                 }
-            ]
+            ],
+            "answer" : "3"
         },
         {
             "id": "000005",
@@ -88,7 +92,8 @@
                     "content" : "some text here",
                     "button-state": "active"
                 }
-            ]
+            ],
+            "answer" : "4"
         }
     ]
 }
