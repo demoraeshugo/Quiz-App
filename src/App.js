@@ -19,6 +19,7 @@ class App extends Component {
   handleStartButtonClick = () => {
     this.setState({
       current: 0,
+      score: 0,
       display: "Questions"
     });
   };
