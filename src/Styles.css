@@ -1,0 +1,15 @@
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+#Feed {
+  Height: 90vh;
+  background-color: aqua;
+}

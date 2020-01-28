@@ -3,6 +3,7 @@ import LandingPage from "../Main/Landing-Page";
 import QuestionFeed from "../Main/Question-Feed";
 import ResultFeed from "../Main/Result-Feed";
 import FadeIn from "react-fade-in";
+import "/Users/School/Desktop/CS_Projects/Zappos Project/zappos-app/src/Styles.css";
 
 /*Functional Component that conditionally renders feed
     - LandingPage
@@ -13,15 +14,12 @@ const Main = props => {
   function getFeedType(props) {
     if (props.display === "LandingPage") {
       return (
-        <FadeIn>
           <LandingPage
             handleStartButtonClick={props.handleStartButtonClick}
           ></LandingPage>
-        </FadeIn>
       );
     } else if (props.display === "Questions") {
       return (
-        <FadeIn>
           <QuestionFeed
             question={props.question}
             handleNextButtonClick={props.handleNextButtonClick}
@@ -31,24 +29,25 @@ const Main = props => {
             checked={props.checked}
             onChange={props.onChange}
           ></QuestionFeed>
-        </FadeIn>
       );
     } else if (props.display === "Results") {
       return (
-        <FadeIn>
           <ResultFeed
             handleStartButtonClick={props.handleStartButtonClick}
             score={props.score}
             getScore={props.getScore}
           ></ResultFeed>
-        </FadeIn>
       );
     } else {
       console.log("Failed to Load Feed");
       return "Failed to Load Feed";
     }
   }
-  return getFeedType(props);
+  return (
+    <div id="Feed">
+      <FadeIn>{getFeedType(props)}</FadeIn>
+    </div>
+  );
 };
 
 export default Main;
