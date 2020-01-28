@@ -28,7 +28,9 @@ const Main = props => {
       );
     } 
     else if (props.display === "Results") {
-      return <ResultFeed></ResultFeed>;
+      return <ResultFeed handleStartButtonClick={props.handleStartButtonClick}
+      score={props.score}
+      getScore={props.getScore}></ResultFeed>;
     } 
     else {
       console.log("Failed to Load Feed");

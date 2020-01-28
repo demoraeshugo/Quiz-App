@@ -16,6 +16,7 @@ class App extends Component {
 
   handleStartButtonClick = () => {
     this.setState({
+      current: 0,
       display: "Questions"
     });
   };
@@ -39,13 +40,27 @@ class App extends Component {
     console.log(this.state)
   }
 
+  answers = [0,0,0,0,0]
+
+  getScore = () => {
+    var score = 0;
+    for(let i = 0; i < jsonData.questions.length; i++) {
+      if(this.answers[i] === parseInt(jsonData.questions[i].answer)) {
+        score+=10;
+      }
+    }
+    this.setState({
+      score: score
+    })
+  }
+
   componentDidMount() {
     this.getQuestion();
   }
 
   render() {
-    const { display, current, question } = this.state;
-    const { handleStartButtonClick, handleNextButtonClick, getQuestion } = this
+    const { display, current, question, score } = this.state;
+    const { handleStartButtonClick, handleNextButtonClick, getQuestion, getScore} = this
 
     return (
       <div>
@@ -56,6 +71,8 @@ class App extends Component {
           handleNextButtonClick={handleNextButtonClick}
           question={question}
           getQuestion={getQuestion}
+          getScore={getScore}
+          score={score}
         />
         <Footer />
       </div>
