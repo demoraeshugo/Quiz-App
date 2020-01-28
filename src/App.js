@@ -22,6 +22,7 @@ class App extends Component {
       score: 0,
       display: "Questions"
     });
+    this.answers = []
   };
 
   getQuestion = () => {
@@ -55,7 +56,6 @@ class App extends Component {
   answers = [];
 
   getScore = () => {
-    console.log(this.answers);
     var score = 0;
     for (let i = 0; i < jsonData.questions.length; i++) {
       if (this.answers[i] === parseInt(jsonData.questions[i].answer)) {
