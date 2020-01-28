@@ -1,7 +1,8 @@
 import React, { Component } from "react"; 
 import AnswerFeed from "../Question-Feed/Answer-Feed";
 
-/*This components renders quiz 
+/*
+Class based component, each question and it's answers
      - Question Number
      - Question Content
      - Question Choices
