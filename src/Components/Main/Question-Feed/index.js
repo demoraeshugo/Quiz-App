@@ -33,8 +33,8 @@ class QuestionFeed extends Component {
           <p>Question {questionNum} of 5</p>
           <p>{content}</p>
         </div>
-        <AnswerFeed choices={choices}></AnswerFeed>
-    
+        <AnswerFeed choices={choices}
+        handleSubmit={this.props.handleSubmit}></AnswerFeed>
         <NextButton
           handleNextButtonClick={this.props.handleNextButtonClick}
         ></NextButton>

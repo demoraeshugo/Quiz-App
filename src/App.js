@@ -54,13 +54,18 @@ class App extends Component {
     })
   }
 
+  handleSubmit = (event) => {
+    console.log(event.target)
+    event.preventDefault()
+  }
+
   componentDidMount() {
     this.getQuestion();
   }
 
   render() {
     const { display, current, question, score } = this.state;
-    const { handleStartButtonClick, handleNextButtonClick, getQuestion, getScore} = this
+    const { handleStartButtonClick, handleNextButtonClick, getQuestion, getScore, handleSubmit} = this
 
     return (
       <div>
@@ -73,6 +78,7 @@ class App extends Component {
           getQuestion={getQuestion}
           getScore={getScore}
           score={score}
+          handleSubmit={handleSubmit}
         />
         <Footer />
       </div>

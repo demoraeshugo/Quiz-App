@@ -24,6 +24,7 @@ const Main = props => {
           handleNextButtonClick={props.handleNextButtonClick}
           getQuestion={props.getQuestion}
           current={props.current}
+          handleSubmit={props.handleSubmit}
         ></QuestionFeed>
       );
     } 
