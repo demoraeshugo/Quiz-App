@@ -3,6 +3,7 @@ import LandingPage from "../Main/Landing-Page";
 import QuestionFeed from "../Main/Question-Feed";
 import ResultFeed from "../Main/Result-Feed";
 import FadeIn from "react-fade-in";
+import "../../Styles/Styles.scss";
 
 /*Functional Component that conditionally renders feed
     - LandingPage

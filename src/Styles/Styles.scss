@@ -1,4 +1,5 @@
 @import "./Variables.scss";
+@import "./Wrappers.scss";
 
 * {
     background: $primaryColor;
@@ -18,5 +19,17 @@ button, #submitButton {
 
 #overlay {
     z-index: -1;
+}
+
+#bottom {
+    bottom: 0;
+    position: fixed;
+}
+
+#LandingPage {
+    font-size: 10vw;
+    span {
+        color: $secondaryColor;
+    }
 }
 

@@ -21,38 +21,4 @@
       -ms-flex-align: center;
           align-items: center;
 }
-
-* {
-  background: #6C93EE;
-  color: white;
-  font-family: 'Handlee', cursive;
-}
-
-button, #submitButton {
-  background-color: #3AE9F6;
-  height: 75px;
-  width: 175px;
-  border-radius: 35px;
-  border-width: 0;
-  -webkit-box-shadow: 0px 3px 3px gray;
-          box-shadow: 0px 3px 3px gray;
-  font-size: 30px;
-}
-
-#overlay {
-  z-index: -1;
-}
-
-#bottom {
-  bottom: 0;
-  position: fixed;
-}
-
-#LandingPage {
-  font-size: 10vw;
-}
-
-#LandingPage span {
-  color: #3AE9F6;
-}
-/*# sourceMappingURL=Styles.css.map */
+/*# sourceMappingURL=Wrappers.css.map */

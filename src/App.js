@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import jsonData from "../src/questions.json";
 import Main from "../src/Components/Main";
-import Footer from "../src/Components/Footer";
+import Bottom from "./Components/Bottom";
 import { ReactComponent as BlueOverlay } from "./Blue-Overlay.svg";
-import '../src/Styles/Styles.scss'
+import "../src/Styles/Styles.scss";
 
 class App extends Component {
   constructor(props) {
@@ -83,10 +83,7 @@ class App extends Component {
     } = this;
 
     return (
-      <div className="container">
-        <div id="overlay">
-          <BlueOverlay></BlueOverlay>
-        </div>
+      <div className="wrapper">
         <Main
           display={display}
           current={current}
@@ -99,7 +96,7 @@ class App extends Component {
           checked={checked}
           onChange={onChange}
         />
-        <Footer />
+        <Bottom />
       </div>
     );
   }

@@ -1,11 +1,12 @@
 import React from "react";
+import "../../Styles/Styles.scss";
 
-const Footer = (props) => {
+const Bottom = (props) => {
     return (
-       <div>
+       <div id="bottom">
            <span>Inside Footer Component</span>
        </div>
     )
 }
 
-export default Footer;
+export default Bottom;
