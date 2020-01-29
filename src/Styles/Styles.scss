@@ -2,37 +2,57 @@
 @import "./Wrappers.scss";
 
 * {
-    background: $primaryColor;
-    color: $tertiaryColor;
-    font-family: 'Handlee', cursive;
+  color: $tertiaryColor;
+  font-family: "Handlee", cursive;
 }
 
-button, #submitButton {
-    background-color: $secondaryColor;
-    height: 75px;
-    width: 175px;
-    border-radius: 35px;
-    border-width: 0;
-    box-shadow: 0px 3px 3px gray;
-    font-size: 30px;
+#root {
+  background-image: url("../Assets/Bg-Phone@2x.png");
+  background-color: $secondaryColor;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  #root {
+    background-image: url("../Assets/Background@2x.png");
+  }
+}
+
+button,
+#submitButton {
+  background-color: $secondaryColor;
+  height: 75px;
+  width: 175px;
+  border-radius: 35px;
+  border-width: 0;
+  box-shadow: 0px 3px 3px gray;
+  padding: 5px;
+  font-size: 45px;
 }
 
 #overlay {
-    z-index: -1;
+  z-index: -1;
 }
 
 #bottom {
-    bottom: 0;
-    position: fixed;
+  bottom: 0;
+  position: fixed;
 }
 
 #LandingPage {
-    font-size: 10vw;
-    p {
-        text-shadow: 0px 3px 3px gray;
-    }
-    span {
-        color: $secondaryColor;
-    }
+  font-size: 2em;
+  p {
+    text-shadow: 0px 3px 3px gray;
+  }
+  span {
+    color: $secondaryColor;
+  }
 }
 
+#Feed {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
