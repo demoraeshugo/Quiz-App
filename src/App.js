@@ -59,7 +59,7 @@ class App extends Component {
     var score = 0;
     for (let i = 0; i < jsonData.questions.length; i++) {
       if (this.answers[i] === parseInt(jsonData.questions[i].answer)) {
-        score += 10;
+        score += 20;
       }
     }
     this.setState({

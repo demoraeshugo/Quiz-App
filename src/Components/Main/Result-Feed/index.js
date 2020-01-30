@@ -14,7 +14,7 @@ class ResultFeed extends Component {
   render() {
     return (
       <div>
-        <h3> Your Score was: {this.props.score}</h3>
+        <h3> Your Score was: {this.props.score}%</h3>
         <button onClick={this.props.handleStartButtonClick}><h2>Restart</h2></button>
       </div>
     );
