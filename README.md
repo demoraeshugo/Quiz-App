@@ -9,6 +9,9 @@ I used React JS to create this project. The majority of my work
           AWS connected to my repository. This was a very nice setup that allowed
           me to develop and deploy within minutes.
           
+## Live Version
+(https://master.d1dilsadm71z5w.amplifyapp.com/)
+          
 ## Component Hierarchy
 - App
   - Main
@@ -25,6 +28,9 @@ I used React JS to create this project. The majority of my work
         - Restart Button
      - About Page
         - Text
-          
+        
+## Wire Frame
+I designed this wire frame using Adobe XD for the purpose of giving myself a clear vision and goal to work towards
+
 ![Landing Page](https://user-images.githubusercontent.com/45345315/73479562-34d01a00-4366-11ea-9a89-c8d259f9d7f1.png)
 
