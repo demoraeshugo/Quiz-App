@@ -34,7 +34,7 @@ html {
     }
 }
 
-* { border: .5px solid red; };
+//* { border: .5px solid red; };
 
 body {
     margin: 0;
@@ -64,17 +64,6 @@ button,
   position: relative;
   top: 9rem;
 }
-
-#overlay {
-  z-index: -1;
-}
-
-/*
-#bottom {
-  bottom: 0;
-  position: fixed;
-}
-*/
 
 #LandingPage {
   p {
