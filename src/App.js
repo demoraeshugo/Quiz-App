@@ -95,10 +95,11 @@ class App extends Component {
           checked={checked}
           onChange={onChange}
         />
-        <Bottom />
       </div>
     );
   }
 }
 
 export default App;
+
+//<Bottom />

@@ -23,7 +23,7 @@
 */
 
 html {
-    height: 100vh;
+    height: 100%;
     font-size: 42.75%; //10px = 1rem 10/16px = 62.5%
 
     @include responsive(phone) {
@@ -43,17 +43,12 @@ html {
     }
 }
 
-//*{ border: 1px solid red; }
+*{ border: 1px solid red; }
 
 
 body {
     margin: 0;
-    height: 100vh;
-    overflow: hidden;
-}
-
-
-#root {
+    min-height: 100%;
     background-color: $primaryColor;
 }
 
