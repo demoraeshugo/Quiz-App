@@ -30,7 +30,7 @@ const AboutPage = () => {
           consisted of the application's logic and design. Prior to starting any
           coding I spent time scheming the app's architecture and used Adobe XD
           to wireframe a design. I enjoy creating React apps becuase they allow
-          developers to create faster and more inuitive user experiences.
+          developers to create faster and more intuitive user experiences.
           React's virtual DOM means that only parts of the DOM that change need
           to be rerendered, which makes for faster updating and rendering. As
           mentioned above, I wireframed this project using Adobe XD. I then used
