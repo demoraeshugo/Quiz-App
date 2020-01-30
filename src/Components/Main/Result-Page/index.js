@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../../../Styles/Styles.scss";
+import { Ellipse as ReactComponent } from "../../../Assets/Ellipse@2x.png"
 
 //This Component renders the results of the users quiz
 class ResultPage extends Component {
