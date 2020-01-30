@@ -1,23 +1,28 @@
 import React, { Component } from "react";
+import Score from "./Score/index";
 import "../../../Styles/Styles.scss";
-import { Ellipse as ReactComponent } from "../../../Assets/Ellipse@2x.png"
 
 //This Component renders the results of the users quiz
 class ResultPage extends Component {
   componentDidMount() {
     this.props.getScore();
   }
+
   componentDidUpdate(prevProps) {
     if (this.props.score !== prevProps.score) {
       this.props.getScore();
     }
   }
+
   render() {
     return (
-      <div>
-        <h3> Your Score was: {this.props.score}%</h3>
+      <div id="resultsPage">
+        <Score score={this.props.score}></Score>
         <div className="buttonGroup">
-          <button id="restartButton" onClick={this.props.handleStartButtonClick}>
+          <button
+            id="restartButton"
+            onClick={this.props.handleStartButtonClick}
+          >
             <h2>Restart</h2>
           </button>
           <button id="aboutButton" onClick={this.props.handleAboutButtonClick}>
@@ -30,3 +35,5 @@ class ResultPage extends Component {
 }
 
 export default ResultPage;
+
+//<Score score={this.props.score} getScore={this.props.getScore}></Score>

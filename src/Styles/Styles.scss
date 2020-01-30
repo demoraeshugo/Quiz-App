@@ -62,7 +62,7 @@ button,
   box-shadow: 0px 1.5px 1.5px gray;
   padding: 5px;
   position: relative;
-  top: 9rem;
+  top: 7rem;
 }
 
 #LandingPage {
@@ -111,5 +111,21 @@ label {
 }
 
 #aboutButton {
-  top: 18rem;
+  top: 14rem;
+}
+
+/*
+#resultsPage {
+  h1 {
+    top: 5rem;
+  }
+}
+*/
+
+#score {
+  h1 {
+    position: absolute;
+    top: 60px;
+    left: 40px;
+  }
 }
