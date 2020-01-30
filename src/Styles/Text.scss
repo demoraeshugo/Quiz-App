@@ -1,43 +1,35 @@
 @import "./Variables.scss";
 
-h1 {
-    font-size: 5rem;
-    margin: 1rem;
+h1, h2, h3, h4, #submitButton {
     color: $tertiaryColor;
     text-shadow: 0px 3px 1.5px gray;
+}
+
+h1, h3, h4 { 
+    margin: 1.5rem;
+}
+
+h1 {
+    font-size: 5rem;
 }
 
 h2 {
     font-size: 4.5rem;
     margin: 1rem;
-    color: $tertiaryColor;
-    text-shadow: 0px 3px 1.5px gray;
 }
 
 #submitButton {
     font-size: 4.5rem;
-    margin: 1rem;
-    color: $tertiaryColor;
-    text-shadow: 0px 3px 1.5px gray;
 }
 
 input[type=submit] {
     font-size: 4.5rem;
-    margin: 1rem;
-    color: $tertiaryColor;
-    text-shadow: 0px 3px 1.5px gray;
 }
 
 h3 {
     font-size: 3.5rem;
-    margin: 1rem;
-    color: $tertiaryColor;
-    text-shadow: 0px 3px 1.5px gray;
 }
 
 h4 {
     font-size: 3rem;
-    margin: 1rem;
-    color: $tertiaryColor;
-    text-shadow: 0px 3px 1.5px gray;
 }
