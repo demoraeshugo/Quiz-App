@@ -47,6 +47,7 @@ const Main = props => {
       return (
         <FadeIn>
           <AboutPage
+            handleAboutButtonClick={props.handleAboutButtonClick}
           ></AboutPage>
         </FadeIn>
       );

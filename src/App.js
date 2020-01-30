@@ -83,6 +83,7 @@ class App extends Component {
       getScore,
       handleSubmit,
       onChange,
+      handleAboutButtonClick,
     } = this;
 
     return (
@@ -98,6 +99,7 @@ class App extends Component {
           handleSubmit={handleSubmit}
           checked={checked}
           onChange={onChange}
+          handleAboutButtonClick={handleAboutButtonClick}
         />
       </div>
     );
