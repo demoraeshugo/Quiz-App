@@ -15,6 +15,8 @@ class App extends Component {
     };
   }
 
+  answers = [];
+
   handleStartButtonClick = () => {
     this.setState({
       current: 0,
@@ -56,8 +58,6 @@ class App extends Component {
       });
     }
   };
-
-  answers = [];
 
   getScore = () => {
     var score = 0;

@@ -15,22 +15,22 @@ html {
     flex-direction: column;
     justify-content: center;
 
-    font-size: 42.75%; //10px = 1rem 10/16px = 62.5%
+    font-size: 43.75%; //7px = 1rem 7/16px = 43.75%
 
     @include responsive(phone) {
-        font-size: 50%; //7px
+        font-size: 50%; //8px
     }
 
     @include responsive(tabPort) {
-        font-size: 56.25%; //8px
+        font-size: 56.25%; //9px
     }
 
     @include responsive(tabLand) {
-        font-size: 62.5%; //9px
+        font-size: 62.5%; //10px
     }
 
     @include responsive(desktop) {
-        font-size: 65%; //12px
+        font-size: 65%; //10.4px
     }
 }
 
@@ -114,18 +114,11 @@ label {
   top: 14rem;
 }
 
-/*
-#resultsPage {
-  h1 {
-    top: 5rem;
-  }
-}
-*/
 
 #score {
   h1 {
     position: absolute;
     top: 60px;
-    left: 40px;
+    left: 25%;
   }
 }
