@@ -34,7 +34,7 @@ html {
     }
 }
 
-//* { border: .5px solid red; };
+* { border: .5px solid red; };
 
 body {
     margin: 0;
@@ -117,3 +117,10 @@ label {
     justify-content: center;
 }
 
+.buttonGroup {
+    justify-content: space-evenly;
+}
+
+#aboutButton {
+  top: 18rem;
+}

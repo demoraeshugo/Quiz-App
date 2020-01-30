@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import '../../../Styles/Styles.scss';
+import "../../../Styles/Styles.scss";
 
 //This Component renders the results of the users quiz
 class ResultPage extends Component {
@@ -15,8 +15,14 @@ class ResultPage extends Component {
     return (
       <div>
         <h3> Your Score was: {this.props.score}%</h3>
-        <button onClick={this.props.handleStartButtonClick}><h2>Restart</h2></button>
-        <button onClick={this.props.handleAboutButtonClick}><h2>About</h2></button>
+        <div className="buttonGroup">
+          <button id="restartButton" onClick={this.props.handleStartButtonClick}>
+            <h2>Restart</h2>
+          </button>
+          <button id="aboutButton" onClick={this.props.handleAboutButtonClick}>
+            <h2>About</h2>
+          </button>
+        </div>
       </div>
     );
   }
