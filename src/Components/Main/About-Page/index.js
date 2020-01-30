@@ -14,6 +14,16 @@ const AboutPage = () => {
           front-end skills to good use. I'd also love to start developing a
           full-stack skillset where ever I land.
         </p>
+        <h4>Why I'm excited to be a Front-End Engineer</h4>
+        <p>
+          Front-End engineering to me is a happy medium between design and
+          technical work. I find that I enjoy a bit of both. I thoroughly
+          enjoyed this project becuase I was able to go from a concept in my
+          head, to a concrete design, and finally into a functional web app.
+          Other software engineering positions are very abstract and hidden
+          away. Front-End is... as the name says, front and center, and it's
+          where I hope I will be too :)
+        </p>
         <h4>Why did you build your site the way you did?</h4>
         <p>
           I wanted to create a "native" like experience on a web platform. To
