@@ -1,6 +1,6 @@
-import React, { Component } from "react"; 
+import React, { Component } from "react";
 import AnswerFeed from "../Question-Feed/Answer-Feed";
-import '../../../Styles/Styles.css';
+import "../../../Styles/Styles.scss";
 
 /*
 Class based component, each question and it's answers
@@ -26,13 +26,14 @@ class QuestionFeed extends Component {
 
   render() {
     const questionNum = this.props.current + 1;
-    const {handleSubmit, checked, onChange} = this.props;
-    const {question, choices } = this.props.question;
+    const { handleSubmit, checked, onChange } = this.props;
+    const { question, choices } = this.props.question;
+
     return (
-      <>
+      <div>
         <div>
-          <p>Question {questionNum} of 5</p>
-          <p>{question}</p>
+          <h4>Question {questionNum} of 5</h4>
+          <h3>{question}</h3>
         </div>
         <AnswerFeed
           choices={choices}
@@ -40,7 +41,7 @@ class QuestionFeed extends Component {
           checked={checked}
           onChange={onChange}
         ></AnswerFeed>
-      </>
+      </div>
     );
   }
 }

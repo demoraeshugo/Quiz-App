@@ -9,18 +9,18 @@ const LandingPage = props => {
   return (
     <div id="LandingPage">
       <FadeIn>
-        <p>
+        <h1>
           (<span>L</span>)lama
-        </p>
-        <p>
+        </h1>
+        <h1>
           (<span>S</span>)chool
-        </p>
-        <p>
+        </h1>
+        <h1>
           (<span>A</span>)dmissions
-        </p>
-        <p>
+        </h1>
+        <h1>
           (<span>T</span>)est
-        </p>
+        </h1>
         <StartButton
           handleStartButtonClick={handleStartButtonClick}
         ></StartButton>

@@ -14,29 +14,33 @@ const Main = props => {
   function getFeedType(props) {
     if (props.display === "LandingPage") {
       return (
-          <LandingPage
-            handleStartButtonClick={props.handleStartButtonClick}
-          ></LandingPage>
+        <LandingPage
+          handleStartButtonClick={props.handleStartButtonClick}
+        ></LandingPage>
       );
     } else if (props.display === "Questions") {
       return (
-          <QuestionFeed
-            question={props.question}
-            handleNextButtonClick={props.handleNextButtonClick}
-            getQuestion={props.getQuestion}
-            current={props.current}
-            handleSubmit={props.handleSubmit}
-            checked={props.checked}
-            onChange={props.onChange}
-          ></QuestionFeed>
+        <div id="questionFeed">
+          <FadeIn>
+            <QuestionFeed
+              question={props.question}
+              handleNextButtonClick={props.handleNextButtonClick}
+              getQuestion={props.getQuestion}
+              current={props.current}
+              handleSubmit={props.handleSubmit}
+              checked={props.checked}
+              onChange={props.onChange}
+            ></QuestionFeed>
+          </FadeIn>
+        </div>
       );
     } else if (props.display === "Results") {
       return (
-          <ResultFeed
-            handleStartButtonClick={props.handleStartButtonClick}
-            score={props.score}
-            getScore={props.getScore}
-          ></ResultFeed>
+        <ResultFeed
+          handleStartButtonClick={props.handleStartButtonClick}
+          score={props.score}
+          getScore={props.getScore}
+        ></ResultFeed>
       );
     } else {
       console.log("Failed to Load Feed");

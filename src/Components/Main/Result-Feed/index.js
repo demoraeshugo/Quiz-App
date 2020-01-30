@@ -14,9 +14,8 @@ class ResultFeed extends Component {
   render() {
     return (
       <div>
-        <p>Inside Result Feed Component</p>
-        <p> Your Score was: {this.props.score}</p>
-        <button onClick={this.props.handleStartButtonClick}>Start Over</button>
+        <h3> Your Score was: {this.props.score}</h3>
+        <button onClick={this.props.handleStartButtonClick}><h2>Start Over</h2></button>
       </div>
     );
   }

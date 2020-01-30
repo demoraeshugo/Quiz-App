@@ -16,11 +16,11 @@ class AnswerFeed extends Component {
                     checked={checked === i ? true : false}
                     onChange={onChange.bind(this, i)}
                   ></input>
-                  {cur.content}
+                  <h4>{cur.content}</h4>
                 </label>
               );
             })}
-            <input id="submitButton" type="submit"></input>
+            <input id="submitButton" type="submit" value="Submit"></input>
           </FadeIn>
         </form>
       </>

@@ -1,15 +1,17 @@
+@import "./MediaQueries.scss";
 @import "./Variables.scss";
 @import "./Wrappers.scss";
+@import "./Text.scss";
 
 * {
   color: $tertiaryColor;
   font-family: "Handlee", cursive;
 }
 
+/*
 #root {
   background-image: url("../Assets/Bg-Phone@2x.png");
   background-color: $secondaryColor;
-  background-size: 100vw;
   background-repeat: no-repeat;
 }
 
@@ -18,30 +20,67 @@
     background-image: url("../Assets/Background@2x.png");
   }
 }
+*/
+
+html {
+    height: 100vh;
+    font-size: 42.75%; //10px = 1rem 10/16px = 62.5%
+
+    @include responsive(phone) {
+        font-size: 50%; //7px
+    }
+
+    @include responsive(tabPort) {
+        font-size: 56.25%; //8px
+    }
+
+    @include responsive(tabLand) {
+        font-size: 62.5%; //9px
+    }
+
+    @include responsive(desktop) {
+        font-size: 65%; //12px
+    }
+}
+
+//*{ border: 1px solid red; }
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+#root {
+    background-color: $primaryColor;
+}
 
 button,
 #submitButton {
   background-color: $secondaryColor;
-  height: 75px;
-  width: 175px;
+  text-align: center;
+  width: 20rem;
+  height: 8rem;
   border-radius: 35px;
   border-width: 0;
   box-shadow: 0px 3px 3px gray;
   padding: 5px;
-  font-size: 45px;
 }
 
 #overlay {
   z-index: -1;
 }
 
+/*
 #bottom {
   bottom: 0;
   position: fixed;
 }
+*/
 
 #LandingPage {
-  font-size: 2em;
   p {
     text-shadow: 0px 3px 3px gray;
   }
@@ -51,8 +90,34 @@ button,
 }
 
 #Feed {
-  height: 85vh;
+  flex-direction: column;
+  height: 80vh;
   width: 100%;
   display: flex;
   justify-content: center;
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
+
+#questionFeed {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+    width: 100%;
+    div, label {
+        width: 100%;
+    }
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+

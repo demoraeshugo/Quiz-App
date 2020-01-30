@@ -1,0 +1,28 @@
+
+@mixin responsive($breakPoint) {
+
+    @if $breakPoint == desktop {
+        @media only screen and (min-width: 1800px) {
+            @content
+        }
+    };
+    @if $breakPoint == tabLand {
+        @media only screen and (min-width: 1400px) {
+            @content
+        }
+    };
+    @if $breakPoint == tabPort {
+        @media only screen and (min-width: 900px) {
+            @content
+        }
+    };
+    @if $breakPoint == phone {
+        @media only screen and (min-width: 600px) {
+            @content
+        }
+    };
+}
+
+@mixin divFactory {
+    
+}

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import jsonData from "../src/questions.json";
 import Main from "../src/Components/Main";
 import Bottom from "./Components/Bottom";
-//import { ReactComponent as BlueOverlay } from "./Blue-Overlay.svg";
 import "../src/Styles/Styles.scss";
 
 class App extends Component {

@@ -6,7 +6,7 @@ const StartButton = props => {
   const { handleStartButtonClick } = props;
   return (
     <div>
-      <button id="StartButton" onClick={handleStartButtonClick}>Start</button>
+      <button id="StartButton" onClick={handleStartButtonClick}><h2>Start</h2></button>
     </div>
   );
 };
