@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import jsonData from "../src/questions.json";
+import questionJSON from "../src/Assets/questions.json";
 import Main from "../src/Components/Main";
-import Bottom from "./Components/Bottom";
 import "../src/Styles/Styles.scss";
 
 class App extends Component {
@@ -25,11 +24,16 @@ class App extends Component {
     this.answers = [];
   };
 
+  handleAboutButtonClick = () => {
+    this.setState({
+      display: "About"
+    });
+  };
+
   getQuestion = () => {
     this.setState({
-      question: jsonData.questions[this.state.current]
+      question: questionJSON.questions[this.state.current]
     });
-    console.log(this.state);
   };
 
   onChange = i => {
@@ -57,8 +61,8 @@ class App extends Component {
 
   getScore = () => {
     var score = 0;
-    for (let i = 0; i < jsonData.questions.length; i++) {
-      if (this.answers[i] === parseInt(jsonData.questions[i].answer)) {
+    for (let i = 0; i < questionJSON.questions.length; i++) {
+      if (this.answers[i] === parseInt(questionJSON.questions[i].answer)) {
         score += 20;
       }
     }
@@ -72,13 +76,13 @@ class App extends Component {
   }
 
   render() {
-    const { display, current, question, score, checked } = this.state;
+    const { display, current, question, score, checked, } = this.state;
     const {
       handleStartButtonClick,
       getQuestion,
       getScore,
       handleSubmit,
-      onChange
+      onChange,
     } = this;
 
     return (

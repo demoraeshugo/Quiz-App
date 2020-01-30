@@ -1,28 +1,26 @@
 import React from "react";
-import LandingPage from "../Main/Landing-Page";
-import QuestionFeed from "../Main/Question-Feed";
-import ResultFeed from "../Main/Result-Feed";
+import LandingPage from "./Landing-Page/index";
+import QuestionPage from "./Question-Page/index";
+import ResultPage from "./Result-Page";
+import AboutPage from "./About-Page/index";
 import FadeIn from "react-fade-in";
 import "../../Styles/Styles.scss";
 
-/*Functional Component that conditionally renders feed
-    - LandingPage
-    - QuestionFeed
-    - ResultFeed
-*/
 const Main = props => {
   function getFeedType(props) {
     if (props.display === "LandingPage") {
       return (
-        <LandingPage
-          handleStartButtonClick={props.handleStartButtonClick}
-        ></LandingPage>
+        <FadeIn>
+          <LandingPage
+            handleStartButtonClick={props.handleStartButtonClick}
+          ></LandingPage>
+        </FadeIn>
       );
     } else if (props.display === "Questions") {
       return (
         <div id="questionFeed">
           <FadeIn>
-            <QuestionFeed
+            <QuestionPage
               question={props.question}
               handleNextButtonClick={props.handleNextButtonClick}
               getQuestion={props.getQuestion}
@@ -30,28 +28,34 @@ const Main = props => {
               handleSubmit={props.handleSubmit}
               checked={props.checked}
               onChange={props.onChange}
-            ></QuestionFeed>
+            ></QuestionPage>
           </FadeIn>
         </div>
       );
     } else if (props.display === "Results") {
       return (
-        <ResultFeed
-          handleStartButtonClick={props.handleStartButtonClick}
-          score={props.score}
-          getScore={props.getScore}
-        ></ResultFeed>
+        <FadeIn>
+          <ResultPage
+            handleStartButtonClick={props.handleStartButtonClick}
+            score={props.score}
+            getScore={props.getScore}
+            handleAboutButtonClick={props.handleAboutButtonClick}
+          ></ResultPage>
+        </FadeIn>
+      );
+    } else if (props.display === "About") {
+      return (
+        <FadeIn>
+          <AboutPage
+          ></AboutPage>
+        </FadeIn>
       );
     } else {
       console.log("Failed to Load Feed");
       return "Failed to Load Feed";
     }
   }
-  return (
-    <div id="Feed">
-      <FadeIn>{getFeedType(props)}</FadeIn>
-    </div>
-  );
+  return <div id="Feed">{getFeedType(props)}</div>;
 };
 
 export default Main;

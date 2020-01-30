@@ -1,6 +1,6 @@
 @import "./Variables.scss";
 
-h1, h2, h3, h4, #submitButton {
+h1, h2, h3, h4, #submitButton, p{
     color: $tertiaryColor;
     text-shadow: 0px 1.5px 1.5px gray;
 }
@@ -30,6 +30,12 @@ h3 {
     font-size: 3.5rem;
 }
 
-h4 {
+h4, p {
     font-size: 3rem;
+}
+
+#AboutPage {
+    h4 {
+        color: $secondaryColor;
+    }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import AnswerFeed from "../Question-Feed/Answer-Feed";
+import AnswerFeed from "../Question-Page/Answer-Feed/index";
 import "../../../Styles/Styles.scss";
 
 /*
@@ -13,7 +13,7 @@ Class based component, each question and it's answers
     - Next Button
 */
 
-class QuestionFeed extends Component {
+class QuestionPage extends Component {
   componentDidMount() {
     this.props.getQuestion();
   }
@@ -46,4 +46,4 @@ class QuestionFeed extends Component {
   }
 }
 
-export default QuestionFeed;
+export default QuestionPage;
