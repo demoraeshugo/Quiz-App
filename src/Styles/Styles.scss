@@ -1,7 +1,8 @@
 @import "./MediaQueries.scss";
 @import "./Variables.scss";
-@import "./Wrappers.scss";
 @import "./Text.scss";
+@import "./Wrappers.scss";
+
 
 * {
   color: $tertiaryColor;
@@ -49,9 +50,11 @@ html {
 
 //* { border: 1px solid red; };
 
+/*
 * {
     height: 100%
 }
+*/
 
 body {
     margin: 0;
