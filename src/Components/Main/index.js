@@ -10,53 +10,47 @@ const Main = props => {
   function getFeedType(props) {
     if (props.display === "LandingPage") {
       return (
-        <FadeIn>
           <LandingPage
             handleStartButtonClick={props.handleStartButtonClick}
           ></LandingPage>
-        </FadeIn>
       );
     } else if (props.display === "Questions") {
       return (
-        <div id="questionFeed">
-          <FadeIn>
-            <QuestionPage
-              question={props.question}
-              handleNextButtonClick={props.handleNextButtonClick}
-              getQuestion={props.getQuestion}
-              current={props.current}
-              handleSubmit={props.handleSubmit}
-              checked={props.checked}
-              onChange={props.onChange}
-            ></QuestionPage>
-          </FadeIn>
-        </div>
+          <QuestionPage
+            question={props.question}
+            handleNextButtonClick={props.handleNextButtonClick}
+            getQuestion={props.getQuestion}
+            current={props.current}
+            handleSubmit={props.handleSubmit}
+            checked={props.checked}
+            onChange={props.onChange}
+          ></QuestionPage>
       );
     } else if (props.display === "Results") {
       return (
-        <FadeIn>
-          <ResultPage
-            handleStartButtonClick={props.handleStartButtonClick}
-            score={props.score}
-            getScore={props.getScore}
-            handleAboutButtonClick={props.handleAboutButtonClick}
-          ></ResultPage>
-        </FadeIn>
+        <ResultPage
+          handleStartButtonClick={props.handleStartButtonClick}
+          score={props.score}
+          getScore={props.getScore}
+          handleAboutButtonClick={props.handleAboutButtonClick}
+        ></ResultPage>
       );
     } else if (props.display === "About") {
       return (
-        <FadeIn>
-          <AboutPage
-            handleAboutButtonClick={props.handleAboutButtonClick}
-          ></AboutPage>
-        </FadeIn>
+        <AboutPage
+          handleAboutButtonClick={props.handleAboutButtonClick}
+        ></AboutPage>
       );
     } else {
       console.log("Failed to Load Feed");
       return "Failed to Load Feed";
     }
   }
-  return <div id="Feed">{getFeedType(props)}</div>;
+  return (
+    <div id="Feed">
+      <FadeIn>{getFeedType(props)}</FadeIn>
+    </div>
+  );
 };
 
 export default Main;

@@ -4,8 +4,8 @@ import "../../../Styles/Styles.scss";
 
 const AboutPage = () => {
   return (
-    <div id="AboutPage">
-      <FadeIn>
+    <FadeIn>
+      <div id="AboutPage">
         <h4>Summary</h4>
         <p>
           Hello and thank you for checking out my project. My name is Hugo, I am
@@ -46,8 +46,8 @@ const AboutPage = () => {
           my repository. This was a very nice setup that allowed me to develop
           and deploy within minutes.
         </p>
-      </FadeIn>
-    </div>
+      </div>
+    </FadeIn>
   );
 };
 
